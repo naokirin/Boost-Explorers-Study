@@ -1,0 +1,6 @@
+.PHONY: main
+main:main.cpp stack.hpp
+	g++ -g -Wall -std=gnu++0x -o bin/main.exe main.cpp stack.hpp
+run:
+	./main.exe
+.DEFAULT: main

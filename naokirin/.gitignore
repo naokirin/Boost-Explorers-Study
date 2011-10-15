@@ -1,0 +1,6 @@
+*.swp
+.omakedb.lock
+*.omc
+.omakedb
+*.exe
+bin/*
