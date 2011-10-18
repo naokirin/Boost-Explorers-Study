@@ -4,3 +4,8 @@
 .omakedb
 *.exe
 bin/*
+*.a
+*.o
+*.gcov
+*.gcno
+*.gcda

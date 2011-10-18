@@ -2,14 +2,14 @@
 
 namespace rinsin{
 
-  class stack {
+  class Stack {
     std::list<int> data;
 
   public:
 
-    stack() = default;
+    Stack() = default;
 
-    stack(const std::list<int> l){
+    Stack(const std::list<int> l){
       data = l;
     }
 
