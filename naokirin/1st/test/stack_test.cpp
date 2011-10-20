@@ -1,4 +1,5 @@
 #include "../src/stack.hpp"
+#include <list>
 #include <memory>
 #include <gtest/gtest.h>
 
@@ -16,20 +17,40 @@ protected:
   virtual void TearDown() {}
 };
 
-
+// Test Stack.push()
 TEST_F(StackTest, testPush){
   stack->push(1);
-  EXPECT_EQ(1,stack->back());
+  EXPECT_EQ(1, stack->back());
+  EXPECT_EQ((size_t)1, stack->getData().size());
+
+  stack->push(2);
+  EXPECT_EQ(2, stack->back());
+  EXPECT_EQ((size_t)2, stack->getData().size());
 }
 
+// Test Stack.pop()
 TEST_F(StackTest, testPop){
   stack->push(1);
   stack->push(2);
+  stack->push(3);
+  stack->pop();
+  EXPECT_EQ(2, stack->back());
+  EXPECT_EQ((size_t)2, stack->getData().size());
+
   stack->pop();
   EXPECT_EQ(1, stack->back());
+  EXPECT_EQ((size_t)1, stack->getData().size());
+
+  stack->pop();
+  EXPECT_TRUE(stack->getData().empty());
+  EXPECT_EQ((size_t)0, stack->getData().size());
 }
 
-TEST_F(StackTest, test){
-  std::unique_ptr<Stack> s(new Stack(std::list<int>(3, 2)));
-  EXPECT_TRUE(std::list<int>(3, 2) == s->getData());
+// Test Stack Constructor
+TEST_F(StackTest, testConstructor){
+  stack = std::unique_ptr<Stack>(new Stack(std::list<int>(3, 2)));
+  EXPECT_TRUE(std::list<int>(3, 2) == stack->getData());
+
+  stack = std::unique_ptr<Stack>(new Stack(std::list<int>(0)));
+  EXPECT_TRUE(std::list<int>(0) == stack->getData());
 }

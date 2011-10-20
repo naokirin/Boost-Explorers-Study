@@ -1,3 +1,6 @@
+#ifndef __STACK_HPP
+#define __STACK_HPP
+
 #include <list>
 
 namespace rinsin{
@@ -31,3 +34,5 @@ namespace rinsin{
   
   };
 }
+
+#endif // __STACK_HPP
