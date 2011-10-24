@@ -2,10 +2,11 @@
 #define __STACK_HPP
 
 #include <list>
+#include "interface_struct.h"
 
 namespace rinsin{
 
-  class Stack {
+  class Stack : I_DataStruct{
     std::list<int> data;
 
   public:

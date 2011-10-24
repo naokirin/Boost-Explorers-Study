@@ -2,10 +2,11 @@
 #define __QUEUE_HPP
 
 #include <list>
+#include "interface_struct.h"
 
 namespace rinsin{
 
-  class Queue {
+  class Queue : I_DataStruct {
     std::list<int> data;
 
   public:
