@@ -29,7 +29,7 @@ namespace rinsin{
       return data.back();
     }
 
-    std::list<int> getData(){
+    std::list<int> getData() const{
       return data;
     }
   
