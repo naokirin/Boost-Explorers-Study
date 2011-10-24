@@ -1,10 +1,10 @@
-SRCS = src/stack.hpp
-TESTSRCS = test/stack_test.cpp
+SRCS = src/stack.hpp src/queue.hpp
+TESTSRCS = test/stack_test.cpp test/queue_test.cpp
 GTEST_DIR = c:/gtest-1.5.0
 CXXFLAGS = -g -Wall -std=gnu++0x  -I$(GTEST_DIR)/include -I$(GTEST_DIR)
 TARGET = bin/test.exe
-OBJS = src/stack.o
-TESTOBJS = test/stack_test.o
+OBJS = src/stack.o src/queue.hpp
+TESTOBJS = test/stack_test.o test/stack_test.o
 TESTXML = test_detail.xml
 CXX = g++
 
