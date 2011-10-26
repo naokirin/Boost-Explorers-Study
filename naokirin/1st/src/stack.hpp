@@ -6,7 +6,7 @@
 
 namespace rinsin{
 
-  class Stack : I_DataStruct{
+  class Stack : public I_DataStruct{
     std::list<int> data;
 
   public:
