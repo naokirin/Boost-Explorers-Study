@@ -6,7 +6,7 @@
 
 namespace rinsin{
 
-  class Queue : public I_DataStruct {
+  class Queue : public I_DataStruct<int>{
     std::list<int> data;
 
   public:
