@@ -54,3 +54,15 @@ TEST_F(StackTest, testConstructor){
   stack = std::unique_ptr<Stack<int> >(new Stack<int>(std::list<int>(0)));
   EXPECT_TRUE(std::list<int>(0) == stack->getData());
 }
+
+// Test Stack<bool>.flip()
+TEST_F(StackTest, testFlip){
+  typedef std::unique_ptr<Stack<bool> > StackBool;
+  StackBool s = StackBool(new Stack<bool>(std::list<bool>(3, true)));
+  s->flip();
+  EXPECT_TRUE(std::list<bool>(3, false) == s->getData());
+
+  s = StackBool(new Stack<bool>(std::list<bool>(3, false)));
+  s->flip();
+  EXPECT_TRUE(std::list<bool>(3, true) == s->getData());
+}

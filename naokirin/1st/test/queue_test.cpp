@@ -54,3 +54,15 @@ TEST_F(QueueTest, testConstructor){
   queue = std::unique_ptr<Queue<int> >(new Queue<int>(std::list<int>(0)));
   EXPECT_TRUE(std::list<int>(0) == queue->getData());
 }
+
+// Test Queue<bool>.flip()
+TEST_F(QueueTest, testFlip){
+  typedef std::unique_ptr<Queue<bool> > QueueBool;
+  QueueBool s = QueueBool(new Queue<bool>(std::list<bool>(3, true)));
+  s->flip();
+  EXPECT_TRUE(std::list<bool>(3, false) == s->getData());
+
+  s = QueueBool(new Queue<bool>(std::list<bool>(3, false)));
+  s->flip();
+  EXPECT_TRUE(std::list<bool>(3, true) == s->getData());
+}
