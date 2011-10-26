@@ -5,19 +5,19 @@
 #include "interface_struct.h"
 
 namespace rinsin{
-
-  class Queue : public I_DataStruct<int>{
-    std::list<int> data;
+  template <class T>
+  class Queue : public I_DataStruct<T>{
+    std::list<T> data;
 
   public:
 
     Queue() = default;
 
-    Queue(const std::list<int> l){
+    Queue(const std::list<T> l){
       data = l;
     }
 
-    void push(const int& value){
+    void push(const T& value){
       data.push_back(value);
     }
 
@@ -25,11 +25,11 @@ namespace rinsin{
       data.pop_front();
     }
 
-    int front() const{
+    T front() const{
       return data.front();
     }
 
-    std::list<int> getData() const{
+    std::list<T> getData() const{
       return data;
     }
   

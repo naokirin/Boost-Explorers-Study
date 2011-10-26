@@ -8,10 +8,10 @@ using namespace rinsin;
 class QueueTest : public ::testing::Test 
 {
 protected:
-  std::unique_ptr<Queue> queue;
+  std::unique_ptr<Queue<int> > queue;
 
   virtual void SetUp() {
-    queue = std::unique_ptr<Queue>(new Queue());
+    queue = std::unique_ptr<Queue<int> >(new Queue<int>());
   }
 
   virtual void TearDown() {}
@@ -48,9 +48,9 @@ TEST_F(QueueTest, testPop){
 
 // Test Queue Constructor
 TEST_F(QueueTest, testConstructor){
-  queue = std::unique_ptr<Queue>(new Queue(std::list<int>(3, 2)));
+  queue = std::unique_ptr<Queue<int> >(new Queue<int>(std::list<int>(3, 2)));
   EXPECT_TRUE(std::list<int>(3, 2) == queue->getData());
 
-  queue = std::unique_ptr<Queue>(new Queue(std::list<int>(0)));
+  queue = std::unique_ptr<Queue<int> >(new Queue<int>(std::list<int>(0)));
   EXPECT_TRUE(std::list<int>(0) == queue->getData());
 }

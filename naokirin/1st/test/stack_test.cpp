@@ -8,10 +8,10 @@ using namespace rinsin;
 class StackTest : public ::testing::Test 
 {
 protected:
-  std::unique_ptr<Stack> stack;
+  std::unique_ptr<Stack<int> > stack;
 
   virtual void SetUp() {
-    stack = std::unique_ptr<Stack>(new Stack());
+    stack = std::unique_ptr<Stack<int> >(new Stack<int>());
   }
 
   virtual void TearDown() {}
@@ -48,9 +48,9 @@ TEST_F(StackTest, testPop){
 
 // Test Stack Constructor
 TEST_F(StackTest, testConstructor){
-  stack = std::unique_ptr<Stack>(new Stack(std::list<int>(3, 2)));
+  stack = std::unique_ptr<Stack<int> >(new Stack<int>(std::list<int>(3, 2)));
   EXPECT_TRUE(std::list<int>(3, 2) == stack->getData());
 
-  stack = std::unique_ptr<Stack>(new Stack(std::list<int>(0)));
+  stack = std::unique_ptr<Stack<int> >(new Stack<int>(std::list<int>(0)));
   EXPECT_TRUE(std::list<int>(0) == stack->getData());
 }

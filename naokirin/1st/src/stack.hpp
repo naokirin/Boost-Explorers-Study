@@ -6,18 +6,19 @@
 
 namespace rinsin{
 
-  class Stack : public I_DataStruct<int>{
-    std::list<int> data;
+  template <class T>
+  class Stack : public I_DataStruct<T>{
+    std::list<T> data;
 
   public:
 
     Stack() = default;
 
-    Stack(const std::list<int> l){
+    Stack(const std::list<T> l){
       data = l;
     }
 
-    void push(const int& value){
+    void push(const T& value){
       data.push_back(value);
     }
 
@@ -25,11 +26,11 @@ namespace rinsin{
       data.pop_back();
     }
 
-    int back() const{
+    T back() const{
       return data.back();
     }
 
-    std::list<int> getData() const{
+    std::list<T> getData() const{
       return data;
     }
   
