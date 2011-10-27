@@ -7,14 +7,14 @@
 
 namespace rinsin{
   template <class T>
-  class Queue : public I_DataStruct<T>{
+  class QueueImpl : public I_DataStruct<T>{
+  protected:
     std::list<T> data;
 
   public:
+    QueueImpl() = default;
 
-    Queue() = default;
-
-    Queue(const std::list<T> l){
+    QueueImpl(const std::list<T>& l){
       data = l;
     }
 
@@ -36,34 +36,18 @@ namespace rinsin{
   
   };
 
-  // bool型で特殊化
-  template <>
-  class Queue<bool> : public I_DataStruct<bool>{
-    std::list<bool> data;
-
+  template <class T>
+  class Queue : public QueueImpl<T>{
   public:
+    Queue() : QueueImpl<T>() {}
+    Queue(const std::list<T>& l) : QueueImpl<T>(l) {}
+  };
 
-    Queue() = default;
-
-    Queue(const std::list<bool> l){
-      data = l;
-    }
-
-    void push(const bool& value){
-      data.push_back(value);
-    }
-
-    void pop(){
-      data.pop_front();
-    }
-
-    bool front() const{
-      return data.front();
-    }
-
-    std::list<bool> getData() const{
-      return data;
-    }
+  template <>
+  class Queue<bool> : public QueueImpl<bool>{
+  public:
+    Queue() : QueueImpl<bool>() {}
+    Queue(const std::list<bool>& l) : QueueImpl<bool>(l) {}
 
     void flip(){
       std::for_each(data.begin(), data.end(), [&](bool& bit){bit = !bit;});

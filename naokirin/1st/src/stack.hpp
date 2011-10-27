@@ -8,64 +8,50 @@
 namespace rinsin{
 
   template <class T>
-  class Stack : public I_DataStruct<T>{
-    std::list<T> data;
+  class StackImpl : public I_DataStruct<T>{
+  protected:
+    std::list<T> data_;
 
   public:
+    StackImpl() = default;
 
-    Stack() = default;
-
-    Stack(const std::list<T> l){
-      data = l;
+    StackImpl(const std::list<T>& l){
+      data_ = l;
     }
 
     void push(const T& value){
-      data.push_back(value);
+      data_.push_back(value);
     }
 
     void pop(){
-      data.pop_back();
+      data_.pop_back();
     }
 
     T back() const{
-      return data.back();
+      return data_.back();
     }
 
     std::list<T> getData() const{
-      return data;
+      return data_;
     }
   
   };
 
-  template<>
-  class Stack<bool> : public I_DataStruct<bool>{
-  std::list<bool> data;
-
+  template<class T>
+  struct Stack : public StackImpl<T>{
   public:
-    Stack() = default;
+    Stack() : StackImpl<T>(){}
+    Stack(const std::list<T>& l) : StackImpl<T>(l){}
+  };
 
-    Stack(const std::list<bool> l){
-      data = l;
-    }
-
-    void push(const bool& value){
-      data.push_back(value);
-    }
-
-    void pop(){
-      data.pop_back();
-    }
-
-    bool back() const{
-      return data.back();
-    }
-
-    std::list<bool> getData() const{
-      return data;
-    }
+  template<>
+  struct Stack<bool> : public StackImpl<bool> {
+  public:
+    Stack() : StackImpl<bool>(){}
+    Stack(const std::list<bool>& l) : StackImpl<bool>(l){}
 
     void flip(){
-      std::for_each(data.begin(), data.end(), [&](bool& bit){bit = !bit;});
+      std::for_each(data_.begin(), data_.end(), [&](bool& bit){bit = !bit;});
     }
 
   };
