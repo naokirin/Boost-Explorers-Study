@@ -14,9 +14,7 @@ namespace rinsin{
   public:
     QueueImpl() = default;
 
-    QueueImpl(const std::list<T>& l){
-      data_ = l;
-    }
+    QueueImpl(const std::list<T>& l) : data_(l){}
 
     void push(const T& value){
       data_.push_back(value);

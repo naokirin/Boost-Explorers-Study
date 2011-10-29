@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="8" failures="0" disabled="0" errors="0" time="0.001" name="AllTests">
-  <testsuite name="QueueTest" tests="4" failures="0" disabled="0" errors="0" time="0.001">
-    <testcase name="testPush" value_param="" type_param="" status="run" time="0.001" classname="QueueTest" />
+<testsuites tests="8" failures="0" disabled="0" errors="0" time="0" name="AllTests">
+  <testsuite name="QueueTest" tests="4" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="testPush" value_param="" type_param="" status="run" time="0" classname="QueueTest" />
     <testcase name="testPop" value_param="" type_param="" status="run" time="0" classname="QueueTest" />
     <testcase name="testConstructor" value_param="" type_param="" status="run" time="0" classname="QueueTest" />
     <testcase name="testFlip" value_param="" type_param="" status="run" time="0" classname="QueueTest" />

@@ -15,9 +15,7 @@ namespace rinsin{
   public:
     StackImpl() = default;
 
-    StackImpl(const std::list<T>& l){
-      data_ = l;
-    }
+    StackImpl(const std::list<T>& l) : data_(l){}
 
     void push(const T& value){
       data_.push_back(value);
