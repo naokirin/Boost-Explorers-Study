@@ -49,7 +49,7 @@ namespace rinsin{
     Stack(const std::list<bool>& l) : StackImpl<bool>(l){}
 
     void flip(){
-      std::for_each(data_.begin(), data_.end(), [&](bool& bit){bit = !bit;});
+      std::for_each(data_.begin(), data_.end(), [](bool& bit){bit = !bit;});
     }
 
   };
