@@ -27,7 +27,7 @@ namespace rinsin{
       data_.pop_back();
     }
 
-    T back() const{
+    T top() const{
       return data_.back();
     }
 

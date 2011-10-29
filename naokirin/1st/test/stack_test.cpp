@@ -20,11 +20,11 @@ protected:
 // Test Stack.push()
 TEST_F(StackTest, testPush){
   stack->push(1);
-  EXPECT_EQ(1, stack->back());
+  EXPECT_EQ(1, stack->top());
   EXPECT_EQ((size_t)1, stack->getData().size());
 
   stack->push(2);
-  EXPECT_EQ(2, stack->back());
+  EXPECT_EQ(2, stack->top());
   EXPECT_EQ((size_t)2, stack->getData().size());
 }
 
@@ -34,11 +34,11 @@ TEST_F(StackTest, testPop){
   stack->push(2);
   stack->push(3);
   stack->pop();
-  EXPECT_EQ(2, stack->back());
+  EXPECT_EQ(2, stack->top());
   EXPECT_EQ((size_t)2, stack->getData().size());
 
   stack->pop();
-  EXPECT_EQ(1, stack->back());
+  EXPECT_EQ(1, stack->top());
   EXPECT_EQ((size_t)1, stack->getData().size());
 
   stack->pop();
