@@ -16,7 +16,7 @@ namespace pocketberserker {
 			data.push_back(num);
 		}
 
-		int back() {
+		int back() const {
 			return data.back();
 		}
 
@@ -24,7 +24,7 @@ namespace pocketberserker {
 			data.pop_back();
 		}
 
-		std::list<int> get() {
+		std::list<int> get() const {
 			return data;
 		}
 	};
