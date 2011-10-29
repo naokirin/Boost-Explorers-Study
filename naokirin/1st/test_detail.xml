@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="8" failures="0" disabled="0" errors="0" time="0" name="AllTests">
+<testsuites tests="8" failures="0" disabled="0" errors="0" time="0.01" name="AllTests">
   <testsuite name="QueueTest" tests="4" failures="0" disabled="0" errors="0" time="0">
     <testcase name="testPush" status="run" time="0" classname="QueueTest" />
     <testcase name="testPop" status="run" time="0" classname="QueueTest" />
     <testcase name="testConstructor" status="run" time="0" classname="QueueTest" />
     <testcase name="testFlip" status="run" time="0" classname="QueueTest" />
   </testsuite>
-  <testsuite name="StackTest" tests="4" failures="0" disabled="0" errors="0" time="0">
+  <testsuite name="StackTest" tests="4" failures="0" disabled="0" errors="0" time="0.01">
     <testcase name="testPush" status="run" time="0" classname="StackTest" />
-    <testcase name="testPop" status="run" time="0" classname="StackTest" />
+    <testcase name="testPop" status="run" time="0.01" classname="StackTest" />
     <testcase name="testConstructor" status="run" time="0" classname="StackTest" />
     <testcase name="testFlip" status="run" time="0" classname="StackTest" />
   </testsuite>

@@ -9,29 +9,29 @@ namespace rinsin{
   template <class T>
   class QueueImpl : public I_DataStruct<T>{
   protected:
-    std::list<T> data;
+    std::list<T> data_;
 
   public:
     QueueImpl() = default;
 
     QueueImpl(const std::list<T>& l){
-      data = l;
+      data_ = l;
     }
 
     void push(const T& value){
-      data.push_back(value);
+      data_.push_back(value);
     }
 
     void pop(){
-      data.pop_front();
+      data_.pop_front();
     }
 
     T front() const{
-      return data.front();
+      return data_.front();
     }
 
     std::list<T> getData() const{
-      return data;
+      return data_;
     }
   
   };
@@ -50,7 +50,7 @@ namespace rinsin{
     Queue(const std::list<bool>& l) : QueueImpl<bool>(l) {}
 
     void flip(){
-      std::for_each(data.begin(), data.end(), [&](bool& bit){bit = !bit;});
+      std::for_each(data_.begin(), data_.end(), [&](bool& bit){bit = !bit;});
     }
   };
 }
