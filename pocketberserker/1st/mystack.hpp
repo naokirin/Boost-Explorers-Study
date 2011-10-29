@@ -10,9 +10,7 @@ namespace pocketberserker {
 
 		MyStack() {}
 
-		MyStack(std::list<int> d) {
-			data = d;
-		}
+		MyStack(const std::list<int>& d): data(d) {}
 
 		void push(int num) {
 			data.push_back(num);
