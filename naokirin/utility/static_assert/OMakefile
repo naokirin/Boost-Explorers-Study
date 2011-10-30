@@ -1,0 +1,14 @@
+SRCS = src/static_assert_main.cpp src/static_assert_class.hpp src/static_assert_function.hpp
+CXXFLAGS = -Wall -std=gnu++0x 
+TARGET = bin/main.exe
+CXX = g++
+
+.PHONY:clean 
+
+clean: $(TARGET)
+	rm -f $(TARGET) 
+
+$(TARGET): $(SRCS)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(TARGET)
+
+.DEFAULT:$(TARGET) 
