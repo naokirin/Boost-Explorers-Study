@@ -1,0 +1,14 @@
+SRCS = src/type_inference_main.cpp
+CXXFLAGS = -Wall -std=gnu++0x 
+TARGET = bin/main.exe
+CXX = g++
+
+.PHONY:clean 
+
+clean: $(TARGET)
+	rm -f $(TARGET) 
+
+$(TARGET): $(SRCS)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(TARGET)
+
+.DEFAULT:$(TARGET) 
