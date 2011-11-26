@@ -1,0 +1,207 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C62737E1470979E000BC1DA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C62737D1470979E000BC1DA /* main.cpp */; };
+		6C6273801470979E000BC1DA /* naokirin1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C62737F1470979E000BC1DA /* naokirin1.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C6273771470979E000BC1DA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				6C6273801470979E000BC1DA /* naokirin1.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C6273791470979E000BC1DA /* naokirin1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = naokirin1; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C62737D1470979E000BC1DA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6C62737F1470979E000BC1DA /* naokirin1.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = naokirin1.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C6273761470979E000BC1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C62736E1470979E000BC1DA = {
+			isa = PBXGroup;
+			children = (
+				6C62737C1470979E000BC1DA /* naokirin1 */,
+				6C62737A1470979E000BC1DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C62737A1470979E000BC1DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C6273791470979E000BC1DA /* naokirin1 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C62737C1470979E000BC1DA /* naokirin1 */ = {
+			isa = PBXGroup;
+			children = (
+				6C62737D1470979E000BC1DA /* main.cpp */,
+				6C62737F1470979E000BC1DA /* naokirin1.1 */,
+			);
+			path = naokirin1;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C6273781470979E000BC1DA /* naokirin1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C6273831470979E000BC1DA /* Build configuration list for PBXNativeTarget "naokirin1" */;
+			buildPhases = (
+				6C6273751470979E000BC1DA /* Sources */,
+				6C6273761470979E000BC1DA /* Frameworks */,
+				6C6273771470979E000BC1DA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = naokirin1;
+			productName = naokirin1;
+			productReference = 6C6273791470979E000BC1DA /* naokirin1 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C6273701470979E000BC1DA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6C6273731470979E000BC1DA /* Build configuration list for PBXProject "naokirin1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6C62736E1470979E000BC1DA;
+			productRefGroup = 6C62737A1470979E000BC1DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C6273781470979E000BC1DA /* naokirin1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C6273751470979E000BC1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C62737E1470979E000BC1DA /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6C6273811470979E000BC1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6C6273821470979E000BC1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6C6273841470979E000BC1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6C6273851470979E000BC1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C6273731470979E000BC1DA /* Build configuration list for PBXProject "naokirin1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6273811470979E000BC1DA /* Debug */,
+				6C6273821470979E000BC1DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C6273831470979E000BC1DA /* Build configuration list for PBXNativeTarget "naokirin1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6273841470979E000BC1DA /* Debug */,
+				6C6273851470979E000BC1DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C6273701470979E000BC1DA /* Project object */;
+}
